@@ -1,0 +1,30 @@
+name: Generate Snake Game
+
+on:
+  # Ejecutar cada vez que se haga un push al repositorio
+  push:
+    branches:
+      - main
+  # Ejecutar automáticamente a medianoche
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v2
+
+      - name: Generar Snake Game desde contribuciones
+        uses: Platane/snk@v2.0.0
+        with:
+          github_user_name: GeroDevON
+          outputs: dist/snake.svg
+
+      - name: Subir el contenido generado
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

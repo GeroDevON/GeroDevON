@@ -10,15 +10,8 @@
 
 
 <p align="center">
-    <img src="https://komarev.com/ghpvc/?username=GeroDevON&style=plastic&color=blueviolet" alt="Profile Views"/>
-</p>
-<p align="center">
     <img src="https://github.com/GeroDevON/GeroDevON/blob/output/github-contribution-grid-snake.svg" alt="Snake Game"/>
 </p>
-
-<div align="center">
-    <!-- Puedes añadir más contenido aquí -->
-</div>
 
 
 
